@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g1h-Iz-dWk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--(Subbreddit)-->
+        <scene sceneID="H5a-vC-EEW">
+            <objects>
+                <tableViewController id="Rmu-aZ-JRf" customClass="SubRedditTableViewController" customModule="RedditC" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vrW-Vx-iyY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="k6d-FW-vAx">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subRedditCell" rowHeight="167" id="gL1-hQ-r6o" customClass="SubRedditTableViewCell" customModule="RedditC" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="167"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gL1-hQ-r6o" id="6NA-vr-1fz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="166.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kgG-hD-EGm">
+                                            <rect key="frame" x="16" y="48" width="235" height="71"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Title)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyj-Md-AQg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="48" height="32"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Like Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avc-od-s4C">
+                                                    <rect key="frame" x="0.0" y="32" width="51" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Comment Count)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r46-B3-559">
+                                                    <rect key="frame" x="0.0" y="51.5" width="79.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZiE-p9-sYA">
+                                            <rect key="frame" x="259" y="33" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ZiE-p9-sYA" secondAttribute="height" id="LsC-AY-Xot"/>
+                                                <constraint firstAttribute="width" constant="100" id="lx8-XU-FZJ"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kgG-hD-EGm" firstAttribute="centerY" secondItem="6NA-vr-1fz" secondAttribute="centerY" id="5kX-WW-ybw"/>
+                                        <constraint firstItem="kgG-hD-EGm" firstAttribute="leading" secondItem="6NA-vr-1fz" secondAttribute="leadingMargin" id="ab8-KG-gen"/>
+                                        <constraint firstItem="ZiE-p9-sYA" firstAttribute="leading" secondItem="kgG-hD-EGm" secondAttribute="trailing" constant="8" id="bYI-8o-Sz5"/>
+                                        <constraint firstItem="ZiE-p9-sYA" firstAttribute="centerY" secondItem="6NA-vr-1fz" secondAttribute="centerY" id="hK2-7n-Ebt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ZiE-p9-sYA" secondAttribute="trailing" id="nr1-Bg-n4A"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentCountLabel" destination="r46-B3-559" id="4KB-rl-u4k"/>
+                                    <outlet property="likeCountLabel" destination="avc-od-s4C" id="e6u-Hd-kx2"/>
+                                    <outlet property="redditImageView" destination="ZiE-p9-sYA" id="i1x-mD-K2a"/>
+                                    <outlet property="titleLabel" destination="vyj-Md-AQg" id="Oye-6H-Puj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rmu-aZ-JRf" id="xN8-Xt-1qV"/>
+                            <outlet property="delegate" destination="Rmu-aZ-JRf" id="Rl7-Y0-mij"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="(Subbreddit)" id="D0B-QL-1Vo"/>
+                    <connections>
+                        <outlet property="redditSearchBar" destination="k6d-FW-vAx" id="d0J-yF-TM1"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEm-Ja-uiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="124.58770614692655"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vg8-EI-i3q">
+            <objects>
+                <navigationController id="g1h-Iz-dWk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yGe-3p-1SE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rmu-aZ-JRf" kind="relationship" relationship="rootViewController" id="3eO-V4-6aw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXg-A2-WQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="125"/>
+        </scene>
+    </scenes>
+</document>

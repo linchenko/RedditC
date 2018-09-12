@@ -8,24 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		7EA10A772149723F00126E5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA10A762149723F00126E5E /* AppDelegate.m */; };
-		7EA10A7A2149723F00126E5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA10A792149723F00126E5E /* ViewController.m */; };
 		7EA10A7D2149723F00126E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA10A7B2149723F00126E5E /* Main.storyboard */; };
 		7EA10A7F2149724600126E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA10A7E2149724600126E5E /* Assets.xcassets */; };
 		7EA10A822149724600126E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA10A802149724600126E5E /* LaunchScreen.storyboard */; };
 		7EA10A852149724600126E5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA10A842149724600126E5E /* main.m */; };
+		7EA10A8F214977DF00126E5E /* LRLSubreddit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA10A8E214977DF00126E5E /* LRLSubreddit.m */; };
+		7EA10A9321497F8F00126E5E /* LRLSubredditClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA10A9221497F8F00126E5E /* LRLSubredditClient.m */; };
+		7EA10A962149A02000126E5E /* SubRedditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA10A952149A02000126E5E /* SubRedditTableViewController.swift */; };
+		7EA10A992149A1A300126E5E /* SubRedditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA10A982149A1A300126E5E /* SubRedditTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7EA10A722149723F00126E5E /* RedditC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA10A752149723F00126E5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7EA10A762149723F00126E5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7EA10A782149723F00126E5E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7EA10A792149723F00126E5E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7EA10A7C2149723F00126E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EA10A7E2149724600126E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EA10A812149724600126E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA10A832149724600126E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA10A842149724600126E5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7EA10A8D214977DF00126E5E /* LRLSubreddit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRLSubreddit.h; sourceTree = "<group>"; };
+		7EA10A8E214977DF00126E5E /* LRLSubreddit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRLSubreddit.m; sourceTree = "<group>"; };
+		7EA10A9121497F8F00126E5E /* LRLSubredditClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRLSubredditClient.h; sourceTree = "<group>"; };
+		7EA10A9221497F8F00126E5E /* LRLSubredditClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRLSubredditClient.m; sourceTree = "<group>"; };
+		7EA10A942149A02000126E5E /* RedditC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedditC-Bridging-Header.h"; sourceTree = "<group>"; };
+		7EA10A952149A02000126E5E /* SubRedditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRedditTableViewController.swift; sourceTree = "<group>"; };
+		7EA10A982149A1A300126E5E /* SubRedditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRedditTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +66,46 @@
 		7EA10A742149723F00126E5E /* RedditC */ = {
 			isa = PBXGroup;
 			children = (
+				7EA10A972149A02E00126E5E /* Clients */,
+				7EA10A8C2149757700126E5E /* Model */,
+				7EA10A8B2149751200126E5E /* Resorces */,
+				7EA10A952149A02000126E5E /* SubRedditTableViewController.swift */,
+				7EA10A942149A02000126E5E /* RedditC-Bridging-Header.h */,
+				7EA10A982149A1A300126E5E /* SubRedditTableViewCell.swift */,
+			);
+			path = RedditC;
+			sourceTree = "<group>";
+		};
+		7EA10A8B2149751200126E5E /* Resorces */ = {
+			isa = PBXGroup;
+			children = (
 				7EA10A752149723F00126E5E /* AppDelegate.h */,
 				7EA10A762149723F00126E5E /* AppDelegate.m */,
-				7EA10A782149723F00126E5E /* ViewController.h */,
-				7EA10A792149723F00126E5E /* ViewController.m */,
 				7EA10A7B2149723F00126E5E /* Main.storyboard */,
 				7EA10A7E2149724600126E5E /* Assets.xcassets */,
 				7EA10A802149724600126E5E /* LaunchScreen.storyboard */,
 				7EA10A832149724600126E5E /* Info.plist */,
 				7EA10A842149724600126E5E /* main.m */,
 			);
-			path = RedditC;
+			path = Resorces;
+			sourceTree = "<group>";
+		};
+		7EA10A8C2149757700126E5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EA10A8D214977DF00126E5E /* LRLSubreddit.h */,
+				7EA10A8E214977DF00126E5E /* LRLSubreddit.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7EA10A972149A02E00126E5E /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				7EA10A9121497F8F00126E5E /* LRLSubredditClient.h */,
+				7EA10A9221497F8F00126E5E /* LRLSubredditClient.m */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,11 +134,13 @@
 		7EA10A6A2149723F00126E5E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LRL;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Levi Linchenko";
 				TargetAttributes = {
 					7EA10A712149723F00126E5E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -141,7 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA10A7A2149723F00126E5E /* ViewController.m in Sources */,
+				7EA10A992149A1A300126E5E /* SubRedditTableViewCell.swift in Sources */,
+				7EA10A962149A02000126E5E /* SubRedditTableViewController.swift in Sources */,
+				7EA10A8F214977DF00126E5E /* LRLSubreddit.m in Sources */,
+				7EA10A9321497F8F00126E5E /* LRLSubredditClient.m in Sources */,
 				7EA10A852149724600126E5E /* main.m in Sources */,
 				7EA10A772149723F00126E5E /* AppDelegate.m in Sources */,
 			);
@@ -283,15 +325,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASRKL3D2BB;
-				INFOPLIST_FILE = RedditC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RedditC/Resorces/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goophones.RedditC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditC/RedditC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -300,15 +346,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASRKL3D2BB;
-				INFOPLIST_FILE = RedditC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RedditC/Resorces/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goophones.RedditC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditC/RedditC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
